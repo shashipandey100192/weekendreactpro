@@ -23,10 +23,10 @@ function Mycontact() {
             <img src='myimgs/img1.jpg' width={200} alt='sjdfhjsdghf'/>
 
             <h1>call image from src</h1>
-            <img src={xyz} width={300} alt='sdkfhjsdf'/>
+            <img src={xyz} width={500} alt='sdkfhjsdf'/>
 
             <h1>call image from cdn</h1>
-            <img src={mypic} width={300} alt='imagesdfhgshdgf'/>
+            <img src={mypic} width={500} alt='imagesdfhgshdgf'/>
 
 
         </Fragment>
