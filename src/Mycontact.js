@@ -10,6 +10,7 @@ function Mycontact() {
 
     return (
         <Fragment>
+        <div className='first'>external css link</div>
             <div>Mycontact sdfsd </div>
             <h2>name is  : {name}</h2>
             <h2>operation : {5000+900}</h2>
@@ -27,6 +28,7 @@ function Mycontact() {
 
             <h1>call image from cdn</h1>
             <img src={mypic} width={500} alt='imagesdfhgshdgf'/>
+
 
 
         </Fragment>
