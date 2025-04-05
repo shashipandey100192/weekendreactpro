@@ -1,0 +1,13 @@
+.loginicon
+{
+    border:1px solid gray;
+    width: 200px;
+    height: 200px;
+   
+
+}
+.loginicon img
+{
+    width: 100%;
+    border-radius: 100%;
+}
