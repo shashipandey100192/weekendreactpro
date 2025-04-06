@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { a } from 'react-router-dom'
 
-function Cus_registor() {
+function Cus_regishrefr() {
     return (
         <div className='container mt-3'>
 
@@ -10,37 +10,37 @@ function Cus_registor() {
                     <div className='container-fluid'>
                         <div className='row'>
                             <div className='col-12 p-3 text-center'>
-                                <p className='h2'>New registor page</p>
+                                <p className='h2'>New regishrefr page</p>
                             </div>
                         </div>
                         <div className='row'>
                             <div className='col-md-6'>
-                                <div class="mb-3">
-                                    <label class="form-label">Email address</label>
-                                    <input type="email" class="form-control" />
+                                <div className="mb-3">
+                                    <label className="form-label">Email address</label>
+                                    <input type="email" className="form-control" />
                                 </div>
                             </div>
                             <div className='col-md-6'>
-                                <div class="mb-3">
-                                    <label class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" placeholder='enter fullname'/>
+                                <div className="mb-3">
+                                    <label className="form-label">Full Name</label>
+                                    <input type="text" className="form-control" placeholder='enter fullname'/>
                                 </div>
                             </div>
                             <div className='col-md-6'>
-                                <div class="mb-3">
-                                    <label class="form-label">DOB</label>
-                                    <input type="date" class="form-control" />
+                                <div className="mb-3">
+                                    <label className="form-label">DOB</label>
+                                    <input type="date" className="form-control" />
                                 </div>
                             </div>
                             <div className='col-md-6'>
-                                <div class="mb-3">
-                                    <label class="form-label">Phone No</label>
-                                    <input type="tel" class="form-control" placeholder='enter phone no'/>
+                                <div className="mb-3">
+                                    <label className="form-label">Phone No</label>
+                                    <input type="tel" className="form-control" placeholder='enter phone no'/>
                                 </div>
                             </div>
                             <div className='col-md-6'>
-                                <div class="mb-3">
-                                    <label class="form-label">Gender</label>
+                                <div className="mb-3">
+                                    <label className="form-label">Gender</label>
                                     <select className='form-select'>
                                         <option selected>Male</option>
                                         <option>Female</option>
@@ -49,18 +49,18 @@ function Cus_registor() {
                                 </div>
                             </div>
                             <div className='col-md-6'>
-                                <div class="mb-3">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" class="form-control" />
+                                <div className="mb-3">
+                                    <label className="form-label">Password</label>
+                                    <input type="password" className="form-control" />
                                 </div>
                             </div>
                             <div className='col-md-12 text-center'>
-                                <div class="mb-3">
+                                <div className="mb-3">
 
-                                    <input type="submit" class="btn btn-success"  value="registor now"/>
-                                    <input type="reset" class="btn btn-danger ms-3" />
-                                    {/* <Link to="forgetpassword" className='ms-2'>forget</Link>
-                                    <Link to="/cus_registor" className='ms-2'>New User registor</Link> */}
+                                    <input type="submit" className="btn btn-success"  value="regishrefr now"/>
+                                    <input type="reset" className="btn btn-danger ms-3" />
+                                    {/* <a href="forgetpassword" className='ms-2'>forget</a>
+                                    <a href="/cus_regishrefr" className='ms-2'>New User regishrefr</a> */}
                                 </div>
                             </div>
                         </div>
@@ -71,4 +71,4 @@ function Cus_registor() {
     )
 }
 
-export default Cus_registor
+export default Cus_regishrefr
