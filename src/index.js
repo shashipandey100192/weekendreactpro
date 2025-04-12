@@ -8,6 +8,8 @@ import Welcomepage from './appmodule/Welcomepage';
 import Cus_login from './appmodule/customer/auth/Cus_login';
 import Cus_registor from './appmodule/customer/auth/Cus_registor';
 import Cus_landingpage from './appmodule/customer/dashboard/Cus_landingpage';
+import Cus_mainpage from './appmodule/customer/dashboard/Cus_mainpage';
+import Myhookspage from './appmodule/customer/dashboard/Myhookspage';
 
 
 
@@ -20,7 +22,11 @@ root.render(
         <Route path='' element={<Welcomepage/>}></Route>
         <Route path='cus_login' element={<Cus_login/>}></Route>
         <Route path='cus_registor' element={<Cus_registor/>}></Route>
-        <Route path='cus_dashbaord' element={<Cus_landingpage/>}></Route>
+        <Route path='cus_dashbaord' element={<Cus_landingpage/>}>
+            <Route path='' element={<Cus_mainpage/>}></Route>
+            <Route path='hookspage' element={<Myhookspage/>}></Route>
+        
+        </Route>
         
       </Routes>
     </BrowserRouter>

@@ -16,7 +16,7 @@ function Sidenavbar() {
         </button>
         <div className="collapse" id="home-collapse">
           <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><Link to="#" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Overview</Link></li>
+            <li><Link to="hookspage" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Hooks</Link></li>
             <li><Link to="#" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Updates</Link></li>
             <li><Link to="#" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Reports</Link></li>
           </ul>
