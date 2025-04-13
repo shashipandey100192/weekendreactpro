@@ -10,6 +10,8 @@ import Cus_registor from './appmodule/customer/auth/Cus_registor';
 import Cus_landingpage from './appmodule/customer/dashboard/Cus_landingpage';
 import Cus_mainpage from './appmodule/customer/dashboard/Cus_mainpage';
 import Myhookspage from './appmodule/customer/dashboard/Myhookspage';
+import Myapidatapage from './appmodule/customer/dashboard/Myapidatapage';
+import Productdetailspage from './appmodule/customer/dashboard/Productdetailspage';
 
 
 
@@ -25,6 +27,8 @@ root.render(
         <Route path='cus_dashbaord' element={<Cus_landingpage/>}>
             <Route path='' element={<Cus_mainpage/>}></Route>
             <Route path='hookspage' element={<Myhookspage/>}></Route>
+            <Route path='apidata' element={<Myapidatapage/>}></Route>
+            <Route path='apidata/details/:id' element={<Productdetailspage/>}></Route>
         
         </Route>
         

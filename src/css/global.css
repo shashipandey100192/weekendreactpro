@@ -65,3 +65,18 @@
 {
     margin-top:60px;
 }
+.cimage
+{
+  width: 46% !important;
+  margin-left: 25%;
+
+}
+.col-md-3 a
+{
+  text-decoration: none !important;
+}
+.detls
+{
+  font-weight: bold;
+  font-family: arial black;
+}
