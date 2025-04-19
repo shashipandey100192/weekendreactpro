@@ -12,6 +12,8 @@ import Cus_mainpage from './appmodule/customer/dashboard/Cus_mainpage';
 import Myhookspage from './appmodule/customer/dashboard/Myhookspage';
 import Myapidatapage from './appmodule/customer/dashboard/Myapidatapage';
 import Productdetailspage from './appmodule/customer/dashboard/Productdetailspage';
+import Mychart from './appmodule/customer/dashboard/Mychart';
+import Mydyngraph from './appmodule/customer/dashboard/Mydyngraph';
 
 
 
@@ -29,6 +31,8 @@ root.render(
             <Route path='hookspage' element={<Myhookspage/>}></Route>
             <Route path='apidata' element={<Myapidatapage/>}></Route>
             <Route path='apidata/details/:id' element={<Productdetailspage/>}></Route>
+            <Route path='graphpage' element={<Mychart/>}></Route>
+            <Route path='dyngraphpage' element={<Mydyngraph/>}></Route>
         
         </Route>
         

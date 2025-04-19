@@ -1,5 +1,7 @@
 import React from 'react'
 import { RiBarChartGroupedLine } from "react-icons/ri";
+import Mychart from './Mychart';
+import Mydyngraph from './Mydyngraph';
 
 function Cus_mainpage() {
   return (
@@ -76,16 +78,12 @@ function Cus_mainpage() {
                     </div>
                     <div className='col-md-8 mt-3'>
                         <div className='card shadow p-4'>
-                            <h4>graph</h4>
-                            <h4>graph</h4>
-                            <h4>graph</h4>
+                           <Mydyngraph></Mydyngraph>
                         </div>
                     </div>
                     <div className='col-md-4 mt-3'>
                         <div className='card shadow p-4'>
-                            <h4>graph</h4>
-                            <h4>graph</h4>
-                            <h4>graph</h4>
+                        <Mychart></Mychart>
                         </div>
                     </div>
                 </div>
