@@ -14,6 +14,7 @@ import Myapidatapage from './appmodule/customer/dashboard/Myapidatapage';
 import Productdetailspage from './appmodule/customer/dashboard/Productdetailspage';
 import Mychart from './appmodule/customer/dashboard/Mychart';
 import Mydyngraph from './appmodule/customer/dashboard/Mydyngraph';
+import Parentpage from './appmodule/customer/dashboard/Parentpage';
 
 
 
@@ -33,6 +34,7 @@ root.render(
             <Route path='apidata/details/:id' element={<Productdetailspage/>}></Route>
             <Route path='graphpage' element={<Mychart/>}></Route>
             <Route path='dyngraphpage' element={<Mydyngraph/>}></Route>
+            <Route path='propspage' element={<Parentpage/>}></Route>
         
         </Route>
         

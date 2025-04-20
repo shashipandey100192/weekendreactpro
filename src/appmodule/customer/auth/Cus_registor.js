@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { First } from 'react-bootstrap/esm/PageItem';
 import { a } from 'react-router-dom'
 
 function Cus_regishrefr() {
+    const [stu, setstu]=useState([]);
+
+const getdata = ()=>{
+    const frinds = JSON.parse(localStorage.getItem('students'));
+    setstu(frinds);
+}
+useEffect(()=>{
+    getdata();
+},[])
+
+
     return (
         <div className='container mt-3'>
 
@@ -10,7 +22,7 @@ function Cus_regishrefr() {
                     <div className='container-fluid'>
                         <div className='row'>
                             <div className='col-12 p-3 text-center'>
-                                <p className='h2'>New regishrefr page</p>
+                                <p className='h2'>New registor page</p>
                             </div>
                         </div>
                         <div className='row'>
@@ -42,7 +54,8 @@ function Cus_regishrefr() {
                                 <div className="mb-3">
                                     <label className="form-label">Gender</label>
                                     <select className='form-select'>
-                                        <option selected>Male</option>
+                                    <option selected hidden>gender</option>
+                                        <option>Male</option>
                                         <option>Female</option>
                                         <option>Other</option>
                                     </select>
@@ -65,6 +78,19 @@ function Cus_regishrefr() {
                             </div>
                         </div>
                     </div>
+                    
+                    <select>
+                    <option selected hidden>name</option>
+                        {stu.map((d)=>{
+                            return <option key={d.name}>{d.name}</option>
+                        })}
+                    </select>
+                    <select >
+                    <option selected hidden>phone</option>
+                        {stu.map((d)=>{
+                            return <option key={d.phone}>{d.phone}</option>
+                        })}
+                    </select>
                 </div>
             </div>
         </div>
