@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { First } from 'react-bootstrap/esm/PageItem';
-import { a } from 'react-router-dom'
+import { useForm } from 'react-hook-form';
+
 
 function Cus_regishrefr() {
     const [stu, setstu]=useState([]);
+    const {register, handleSubmit,formState: { errors }}=useForm();
+
+    const myform = (formdata)=>{
+        console.log(formdata)
+    }
 
 const getdata = ()=>{
     const frinds = JSON.parse(localStorage.getItem('students'));
@@ -15,6 +20,7 @@ useEffect(()=>{
 
 
     return (
+        <form onSubmit={handleSubmit(myform)}>
         <div className='container mt-3'>
 
             <div className='row justify-content-center'>
@@ -29,31 +35,36 @@ useEffect(()=>{
                             <div className='col-md-6'>
                                 <div className="mb-3">
                                     <label className="form-label">Email address</label>
-                                    <input type="email" className="form-control" />
+                                    <input type="email" className="form-control" {...register("email",{required:true})}/>
+                                    {errors.email && <p className='text-danger'>Email is required</p>}
                                 </div>
                             </div>
                             <div className='col-md-6'>
                                 <div className="mb-3">
                                     <label className="form-label">Full Name</label>
-                                    <input type="text" className="form-control" placeholder='enter fullname'/>
+                                    <input type="text" className="form-control" placeholder='enter fullname' {...register("fullname",{required:true,minLength:5,maxLength:10})}/>
+                                    {/* {errors.fullname && <p className='text-danger'>Fullname is required</p>} */}
+                                    {errors.fullname?.type==='required' && <p className='text-danger'>Fullname is required</p>}
+                                    {errors.fullname?.type==='minLength' && <p className='text-warning'>Minimum 5 charector </p>}
+                                    {errors.fullname?.type==='maxLength' && <p className='text-success'>too strong </p>}
                                 </div>
                             </div>
                             <div className='col-md-6'>
                                 <div className="mb-3">
                                     <label className="form-label">DOB</label>
-                                    <input type="date" className="form-control" />
+                                    <input type="date" className="form-control" {...register("dob")}/>
                                 </div>
                             </div>
                             <div className='col-md-6'>
                                 <div className="mb-3">
                                     <label className="form-label">Phone No</label>
-                                    <input type="tel" className="form-control" placeholder='enter phone no'/>
+                                    <input type="tel" className="form-control" placeholder='enter phone no' {...register("phone")}/>
                                 </div>
                             </div>
                             <div className='col-md-6'>
                                 <div className="mb-3">
                                     <label className="form-label">Gender</label>
-                                    <select className='form-select'>
+                                    <select className='form-select' {...register("gender")}>
                                     <option selected hidden>gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
@@ -64,7 +75,7 @@ useEffect(()=>{
                             <div className='col-md-6'>
                                 <div className="mb-3">
                                     <label className="form-label">Password</label>
-                                    <input type="password" className="form-control" />
+                                    <input type="password" className="form-control" {...register("pass")}/>
                                 </div>
                             </div>
                             <div className='col-md-12 text-center'>
@@ -94,6 +105,7 @@ useEffect(()=>{
                 </div>
             </div>
         </div>
+        </form>
     )
 }
 
