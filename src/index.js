@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { lazy,Suspense } from 'react';
 import "./css/global.css";
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,6 +16,8 @@ import Productdetailspage from './appmodule/customer/dashboard/Productdetailspag
 import Mychart from './appmodule/customer/dashboard/Mychart';
 import Mydyngraph from './appmodule/customer/dashboard/Mydyngraph';
 import Parentpage from './appmodule/customer/dashboard/Parentpage';
+// import Lazypage from './appmodule/customer/dashboard/Lazypage';
+const Lazypage = lazy(()=>import("./appmodule/customer/dashboard/Lazypage"));
 
 
 
@@ -35,6 +38,9 @@ root.render(
             <Route path='graphpage' element={<Mychart/>}></Route>
             <Route path='dyngraphpage' element={<Mydyngraph/>}></Route>
             <Route path='propspage' element={<Parentpage/>}></Route>
+            <Route path='lazypage' element={<Suspense fallback={<h1 className='loading'>loading page</h1>}>
+              {<Lazypage/>}
+            </Suspense>}></Route>
         
         </Route>
         

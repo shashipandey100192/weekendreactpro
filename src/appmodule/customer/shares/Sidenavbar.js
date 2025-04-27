@@ -21,6 +21,7 @@ function Sidenavbar() {
             <li><Link to="graphpage" className="a-body-emphasis d-inline-flex text-decoration-none rounded">statyic graph</Link></li>
             <li><Link to="dyngraphpage" className="a-body-emphasis d-inline-flex text-decoration-none rounded">dyn graph</Link></li>
             <li><Link to="propspage" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Props</Link></li>
+            <li><Link to="lazypage" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Lazyloading</Link></li>
           </ul>
         </div>
       </li>

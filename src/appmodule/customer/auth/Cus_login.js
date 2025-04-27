@@ -1,15 +1,27 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 
 function Cus_login() {
+    const mynav = useNavigate();
     const [user,setuser]=useState({
         email:"",
         pass:""
     })
 
-const formsub = (e)=>{
-    console.log(user);
+const formsub = ()=>{
+    if(user.email==="" || user.pass==="")
+    {
+        toast.error("user and password invalid");
+    }
+    else
+    {
+        toast.success("welcome to dashboard",{position: "top-left",theme: "dark",autoClose: 1000});
+        setTimeout(()=>{
+            mynav("/cus_dashbaord");
+        },1000);
+        
+    }
 
 }
 const changevalule = (e)=>{
@@ -22,9 +34,11 @@ const changevalule = (e)=>{
     })
 }
 
-    const mymsg = ()=>{
-        toast.success("welcome to login page",{position: "top-left",theme: "dark",autoClose: 1000});
-    }
+    // const mymsg = ()=>{
+    //     toast.success("welcome to login page",{position: "top-left",theme: "dark",autoClose: 1000});
+    // }
+
+
 
     return (
         <div className='container mt-3'>
@@ -58,7 +72,7 @@ const changevalule = (e)=>{
                                     <input type="reset" class="btn btn-danger ms-3"/>
                                     <Link to="forgetpassword" className='ms-2'>forget</Link>
                                     <Link to="/cus_registor" className='ms-2'>New User registor</Link>
-                                    <input type='button' value="msg" onClick={mymsg}/>
+                                    
                                  
                                 </div>
                             </div>

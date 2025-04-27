@@ -1,0 +1,8 @@
+/* @import "tailwindcss"; */
+.first
+{
+    padding:10px;
+    color:red;
+    text-transform: uppercase;
+    background:linear-gradient(orange,blue);
+}
