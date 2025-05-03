@@ -16,6 +16,8 @@ import Productdetailspage from './appmodule/customer/dashboard/Productdetailspag
 import Mychart from './appmodule/customer/dashboard/Mychart';
 import Mydyngraph from './appmodule/customer/dashboard/Mydyngraph';
 import Parentpage from './appmodule/customer/dashboard/Parentpage';
+import Errorpage from './appmodule/customer/shares/Errorpage';
+import Tablepagination from './appmodule/customer/dashboard/Tablepagination';
 // import Lazypage from './appmodule/customer/dashboard/Lazypage';
 const Lazypage = lazy(()=>import("./appmodule/customer/dashboard/Lazypage"));
 
@@ -41,8 +43,10 @@ root.render(
             <Route path='lazypage' element={<Suspense fallback={<h1 className='loading'>loading page</h1>}>
               {<Lazypage/>}
             </Suspense>}></Route>
-        
+            <Route path='pagination' element={<Tablepagination/>}/>
+            <Route path='*' element={<Errorpage/>}/>
         </Route>
+        <Route path='*' element={<Errorpage/>}/>
         
       </Routes>
     </BrowserRouter>
