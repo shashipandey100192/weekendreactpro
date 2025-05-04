@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { PiCurrencyInr } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 function Myapidatapage() {
+    const count = useSelector((state) => state.counter.age)
 
     const [pro, setpro] = useState([]);
 
@@ -32,6 +34,11 @@ function Myapidatapage() {
 
     return (
         <div className='container cmt'>
+            <div className="row">
+                <div className='col-12'>
+                    <h1>{count}</h1>
+                </div>
+            </div>
             <div className='row'>
                 {pro.map((c) => {
                     if (c.id === 6 || c.id === 9) {

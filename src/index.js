@@ -18,6 +18,9 @@ import Mydyngraph from './appmodule/customer/dashboard/Mydyngraph';
 import Parentpage from './appmodule/customer/dashboard/Parentpage';
 import Errorpage from './appmodule/customer/shares/Errorpage';
 import Tablepagination from './appmodule/customer/dashboard/Tablepagination';
+import { Mydatastore } from './appmodule/myredux/Mystorage';
+import { Provider } from 'react-redux';
+import Myreduxpage from './appmodule/myredux/Myreduxpage';
 // import Lazypage from './appmodule/customer/dashboard/Lazypage';
 const Lazypage = lazy(()=>import("./appmodule/customer/dashboard/Lazypage"));
 
@@ -27,6 +30,7 @@ const Lazypage = lazy(()=>import("./appmodule/customer/dashboard/Lazypage"));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <Provider store={Mydatastore}>
     <BrowserRouter>
       <Routes>
         <Route path='' element={<Welcomepage/>}></Route>
@@ -44,13 +48,14 @@ root.render(
               {<Lazypage/>}
             </Suspense>}></Route>
             <Route path='pagination' element={<Tablepagination/>}/>
+            <Route path='redux' element={<Myreduxpage/>}/>
             <Route path='*' element={<Errorpage/>}/>
         </Route>
         <Route path='*' element={<Errorpage/>}/>
         
       </Routes>
     </BrowserRouter>
-
+    </Provider>
   </React.StrictMode>
 );
 

@@ -23,6 +23,7 @@ function Sidenavbar() {
             <li><Link to="propspage" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Props</Link></li>
             <li><Link to="lazypage" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Lazyloading</Link></li>
             <li><Link to="pagination" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Pagination</Link></li>
+            <li><Link to="redux" className="a-body-emphasis d-inline-flex text-decoration-none rounded">Reduxpage</Link></li>
           </ul>
         </div>
       </li>
