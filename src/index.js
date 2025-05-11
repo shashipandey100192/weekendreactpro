@@ -21,6 +21,7 @@ import Tablepagination from './appmodule/customer/dashboard/Tablepagination';
 import { Mydatastore } from './appmodule/myredux/Mystorage';
 import { Provider } from 'react-redux';
 import Myreduxpage from './appmodule/myredux/Myreduxpage';
+import Myconditionpage from './appmodule/customer/dashboard/Myconditionpage';
 // import Lazypage from './appmodule/customer/dashboard/Lazypage';
 const Lazypage = lazy(()=>import("./appmodule/customer/dashboard/Lazypage"));
 
@@ -49,6 +50,7 @@ root.render(
             </Suspense>}></Route>
             <Route path='pagination' element={<Tablepagination/>}/>
             <Route path='redux' element={<Myreduxpage/>}/>
+            <Route path='conpage' element={<Myconditionpage/>}/>
             <Route path='*' element={<Errorpage/>}/>
         </Route>
         <Route path='*' element={<Errorpage/>}/>
