@@ -10,19 +10,22 @@ function Welcomepage() {
             <div className='col-12 text-center'>
                 <h2>Welcome to Login page</h2>
             </div>
-            <div className='col-md-2 border shadow text-center'>
-                <Link to="cus_login" className='loginicon'> 
-                    <img src={cuslogin} alt='cus_login'/>
-                    <h3>Customer Login</h3>
+            <div className='col-md-2 text-center '>
+                <div className='border card rounded-circle p-3 shadow'>
+                <Link to="cus_login" className='loginicon '> 
+                    <img src={cuslogin} alt='cus_login' className='img-fluid rounded-circle'/>
+                    <h5>Customer Login</h5>
                 </Link>
+                </div>
             </div>
-            <div className='col-md-1'></div>
 
-            <div className='col-md-2 border shadow text-center'>
+            <div className='col-md-2 text-center'>
+            <div className='border card rounded-circle p-4 shadow'>
                 <Link to="admin_login" className='loginicon'> 
-                    <img src={adminlogin} alt='cus_login'/>
-                    <h3>Admin Login</h3>
+                    <img src={adminlogin} alt='cus_login' className='img-fluid rounded-circle'/>
+                    <h5>Admin Login</h5>
                 </Link>
+                </div>
             </div>
         </div>
     </div>
